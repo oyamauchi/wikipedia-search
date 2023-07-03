@@ -6,16 +6,14 @@
 	"homepage_url": "https://github.com/corbindavenport/wikipedia-search",
 	"description": "Search Wikipedia in every language from the address bar and context menu.",
 	"options_ui": {
-		"page": "settings.html",	
+		"page": "settings.html",
 		"open_in_tab": false
 	},
 	"omnibox": {
-		"keyword": "wiki"
+		"keyword": "w"
 	},
 	"permissions": [
-		"contextMenus",
-		"storage",
-		"notifications"
+		"storage"
 	],
 	"minimum_chrome_version": "93",
 	"host_permissions": [
@@ -24,17 +22,6 @@
 	"background": {
 		"service_worker": "js/background.js"
 	},
-	"content_scripts": [
-		{
-			"matches": [
-				"https://*.wikipedia.org/*"
-			],
-			"js": [
-				"js/contentscript.js"
-			],
-			"run_at": "document_end"
-		}
-	],
 	"icons": {
 		"32": "img/icon32.png",
 		"48": "img/icon48.png",
